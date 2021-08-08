@@ -10,7 +10,7 @@ RUN apt-get update && apt upgrade -y && apt-get install -y cron
 # Make the cron script executable, and touch the log file it will be writing to:
 RUN chmod +x /tmp/echo_env.sh && touch /tmp/cron.log
 
-RUN chgrp 1009280000 /var/run/crond.pid
+RUN chgrp 1009280000 /var/run/
 
 
 # Install our cron job in root user's crontab, using the file we copied over above:
