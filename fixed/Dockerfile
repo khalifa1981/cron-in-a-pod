@@ -11,6 +11,7 @@ RUN apt-get update && apt upgrade -y && apt-get install -y cron
 RUN chmod +x /tmp/echo_env.sh && touch /tmp/cron.log
 
 RUN chgrp 1009280000 /var/run/
+RUN chgown -R 1009280000:1009280000 /var/run/
 
 
 # Install our cron job in root user's crontab, using the file we copied over above:
